@@ -327,8 +327,9 @@ static NSDictionary *getDictionaryFromNSError(NSError *error) {
         }
       };
 
-  return [[FIRDynamicLinks dynamicLinks] handleUniversalLink:userActivity.webpageURL
+  [[FIRDynamicLinks dynamicLinks] handleUniversalLink:userActivity.webpageURL
                                                   completion:completionBlock];
+  return NO;                                            
 }
 
 #pragma mark - Utilities
